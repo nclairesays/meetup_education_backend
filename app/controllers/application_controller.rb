@@ -13,9 +13,8 @@ class ApplicationController < ActionController::Base
         begin 
             method, token = request.headers['Authorization'].split(' ')
             payload, header = decode_token(token)
-            
             User.find(payload["user_id"])
-        rescue JWT::DecodeError
+        rescue 
             nil
         end
     end

@@ -1,8 +1,11 @@
 class EventsController < ApplicationController
+    before_action :define_current_event
+
+    skip_before_action :authenticate, only: [ :create ]
 
     def create
         event = Event.create(event_params)
-        render json: event
+        render json: event, methods: [ :token ]
     end
 
     def index
@@ -23,7 +26,7 @@ class EventsController < ApplicationController
         render json: current_event
     end
 
-    def current_event
+    def define_current_event
         if params[:id]
             @current_event = Event.find(params[:id])
         else
@@ -36,7 +39,7 @@ class EventsController < ApplicationController
     end
 
     def event_params
-        params.require(:event).permit(:date, :title, :description, :location, :type)
+        params.permit(:date, :title, :description, :location, :type)
     end
 
 end
