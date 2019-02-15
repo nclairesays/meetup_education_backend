@@ -1,7 +1,15 @@
 class UserEventsController < ApplicationController
+    # before_action :define_current_userevent
+
+    skip_before_action :authenticate, only: [ :create ]
+
     def create
         userevent = UserEvent.create(userevent_params)
-        render json: userevent
+        # userevent.user = current_user
+        # userevent.event = current_event
+       
+
+        render json: userevent, methods: [ :token ]
     end
 
     def userevent_params

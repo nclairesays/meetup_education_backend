@@ -3,11 +3,27 @@ class EventsController < ApplicationController
 
     skip_before_action :authenticate, only: [ :create ]
 
-    def create
+    def create_organizer
         event = Event.create(event_params)
-        render json: event, methods: [ :token ]
+        
+        event.organizers << current_user
+        # event.attendees << current_user
+        event.save
+        render json: event, methods: [:token]
     end
 
+    # redirect_to???
+
+    def create_attendee
+        event = Event.create(event_params)
+        
+        event.attendees << current_user
+        # event.attendees << current_user
+        event.save
+        render json: event
+    end
+
+    
     def index
         render json: Event.all
     end

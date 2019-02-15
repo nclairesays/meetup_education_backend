@@ -1,7 +1,9 @@
 class UserArrangementsController < ApplicationController
+    skip_before_action :authenticate, only: [ :create ]
+
     def create
         userarrangement = UserArrangements.create(userarrangement_params)
-        render json: userarrangement
+        render json: userarrangement, methods: [ :token ]
     end
 
     def userarrangement_params

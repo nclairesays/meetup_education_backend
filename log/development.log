@@ -166,7 +166,6 @@ FOREIGN KEY ("event_id")
   ↳ bin/rails:9
   [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
   ↳ bin/rails:9
-<<<<<<< HEAD
 Started GET "/" for 127.0.0.1 at 2019-02-13 16:30:26 -0600
   [1m[35m (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
   ↳ /Users/clairenguyen/.rvm/gems/ruby-2.3.3/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
@@ -211,94 +210,6 @@ activesupport (5.2.2) lib/active_support/callbacks.rb:98:in `run_callbacks'
 actionpack (5.2.2) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
 actionpack (5.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
 actionpack (5.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
-=======
-Started GET "/api/v1/users" for 127.0.0.1 at 2019-02-13 14:50:34 -0600
-  [1m[35m (6.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
-  ↳ /Users/flatironschool/.rvm/gems/ruby-2.3.3/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
-  
-ActionController::RoutingError (No route matches [GET] "/api/v1/users"):
-  
-actionpack (5.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
-web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
-web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
-web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
-web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
-actionpack (5.2.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
-railties (5.2.2) lib/rails/rack/logger.rb:38:in `call_app'
-railties (5.2.2) lib/rails/rack/logger.rb:26:in `block in call'
-activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
-activesupport (5.2.2) lib/active_support/tagged_logging.rb:28:in `tagged'
-activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `tagged'
-railties (5.2.2) lib/rails/rack/logger.rb:26:in `call'
-sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
-actionpack (5.2.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
-actionpack (5.2.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
-rack (2.0.6) lib/rack/method_override.rb:22:in `call'
-rack (2.0.6) lib/rack/runtime.rb:22:in `call'
-activesupport (5.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
-actionpack (5.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
-actionpack (5.2.2) lib/action_dispatch/middleware/static.rb:127:in `call'
-rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
-webpacker (3.5.5) lib/webpacker/dev_server_proxy.rb:22:in `perform_request'
-rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
-railties (5.2.2) lib/rails/engine.rb:524:in `call'
-puma (3.12.0) lib/puma/configuration.rb:225:in `call'
-puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
-puma (3.12.0) lib/puma/server.rb:472:in `process_client'
-puma (3.12.0) lib/puma/server.rb:332:in `block in run'
-puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
-Started GET "/api/v1/users" for 127.0.0.1 at 2019-02-13 15:17:31 -0600
-Processing by Api::V1::UsersController#index as HTML
-  [1m[36mUser Load (2.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
-  ↳ app/controllers/api/v1/users_controller.rb:12
-Completed 200 OK in 120ms (Views: 3.5ms | ActiveRecord: 36.7ms)
-
-
-Started GET "/api/v1/users" for 127.0.0.1 at 2019-02-13 15:20:11 -0600
-Processing by Api::V1::UsersController#index as HTML
-Filter chain halted as :check_authentication rendered or redirected
-Completed 401 Unauthorized in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms)
-
-
-Started OPTIONS "/api/v1/authorization" for 127.0.0.1 at 2019-02-13 15:21:29 -0600
-  
-ActionController::RoutingError (No route matches [OPTIONS] "/api/v1/authorization"):
-  
-actionpack (5.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
-web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
-web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
-web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
-web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
-actionpack (5.2.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
-railties (5.2.2) lib/rails/rack/logger.rb:38:in `call_app'
-railties (5.2.2) lib/rails/rack/logger.rb:26:in `block in call'
-activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
-activesupport (5.2.2) lib/active_support/tagged_logging.rb:28:in `tagged'
-activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `tagged'
-railties (5.2.2) lib/rails/rack/logger.rb:26:in `call'
-sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
-actionpack (5.2.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
-actionpack (5.2.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
-rack (2.0.6) lib/rack/method_override.rb:22:in `call'
-rack (2.0.6) lib/rack/runtime.rb:22:in `call'
-activesupport (5.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
-actionpack (5.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
-actionpack (5.2.2) lib/action_dispatch/middleware/static.rb:127:in `call'
-rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
-webpacker (3.5.5) lib/webpacker/dev_server_proxy.rb:22:in `perform_request'
-rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
-railties (5.2.2) lib/rails/engine.rb:524:in `call'
-puma (3.12.0) lib/puma/configuration.rb:225:in `call'
-puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
-puma (3.12.0) lib/puma/server.rb:472:in `process_client'
-puma (3.12.0) lib/puma/server.rb:332:in `block in run'
-puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
-Started OPTIONS "/api/v1/authorization" for 127.0.0.1 at 2019-02-13 15:21:29 -0600
-  
-ActionController::RoutingError (No route matches [OPTIONS] "/api/v1/authorization"):
-  
-actionpack (5.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
->>>>>>> fae452ad20da74199462c10fd9906014049c4589
 web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
 web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
 web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
@@ -4863,6 +4774,7 @@ Processing by UsersController#show as */*
 Completed 200 OK in 8ms (Views: 1.4ms | ActiveRecord: 1.2ms)
 
 
+<<<<<<< HEAD
 >>>>>>> fae452ad20da74199462c10fd9906014049c4589
 Started GET "/" for 127.0.0.1 at 2019-02-14 11:09:32 -0600
   [1m[35m (5.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
@@ -4888,6 +4800,132 @@ Started GET "/login" for 127.0.0.1 at 2019-02-14 11:11:42 -0600
 ActionController::RoutingError (No route matches [GET] "/login"):
   
 actionpack (5.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+=======
+Started POST "/auth" for 127.0.0.1 at 2019-02-14 10:31:36 -0600
+  [1m[35m (4.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/flatironschool/.rvm/gems/ruby-2.3.3/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by AuthController#create as */*
+  Parameters: {"username"=>"claire", "password"=>"[FILTERED]", "auth"=>{"username"=>"claire", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "claire"], ["LIMIT", 1]]
+  ↳ app/controllers/auth_controller.rb:6
+Completed 200 OK in 163ms (Views: 1.0ms | ActiveRecord: 15.2ms)
+
+
+Started GET "/users/5" for 127.0.0.1 at 2019-02-14 10:31:36 -0600
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"5"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:35
+Completed 200 OK in 8ms (Views: 1.6ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/users/4" for 127.0.0.1 at 2019-02-14 10:31:42 -0600
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (2.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:35
+Completed 200 OK in 10ms (Views: 1.2ms | ActiveRecord: 4.7ms)
+
+
+Started GET "/users/5" for 127.0.0.1 at 2019-02-14 10:32:49 -0600
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"5"}
+Filter chain halted as :authenticate rendered or redirected
+Completed 200 OK in 2ms (Views: 0.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/4" for 127.0.0.1 at 2019-02-14 10:32:55 -0600
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"4"}
+Filter chain halted as :authenticate rendered or redirected
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/4" for 127.0.0.1 at 2019-02-14 10:34:23 -0600
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"4"}
+Filter chain halted as :authenticate rendered or redirected
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/4" for 127.0.0.1 at 2019-02-14 10:34:40 -0600
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:35
+Completed 200 OK in 105ms (Views: 1.7ms | ActiveRecord: 18.0ms)
+
+
+Started GET "/users/4" for 127.0.0.1 at 2019-02-14 10:35:25 -0600
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"4"}
+Filter chain halted as :authenticate rendered or redirected
+Completed 200 OK in 1ms (Views: 0.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/4" for 127.0.0.1 at 2019-02-14 10:56:44 -0600
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"4"}
+Filter chain halted as :authenticate rendered or redirected
+Completed 200 OK in 4ms (Views: 1.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/4" for 127.0.0.1 at 2019-02-14 10:58:56 -0600
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"4"}
+Filter chain halted as :authenticate rendered or redirected
+Completed 200 OK in 1ms (Views: 0.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/4" for 127.0.0.1 at 2019-02-14 11:05:19 -0600
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"4"}
+Filter chain halted as :authenticate rendered or redirected
+Completed 200 OK in 2ms (Views: 0.8ms | ActiveRecord: 0.0ms)
+
+
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mEvent Create (6.6ms)[0m  [1m[32mINSERT INTO "events" ("created_at", "updated_at") VALUES ($1, $2) RETURNING "id"[0m  [["created_at", "2019-02-14 21:05:27.650464"], ["updated_at", "2019-02-14 21:05:27.650464"]]
+  [1m[36mUserEvent Create (19.4ms)[0m  [1m[32mINSERT INTO "user_events" ("user_id", "event_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 1], ["event_id", 1], ["created_at", "2019-02-14 21:05:27.660202"], ["updated_at", "2019-02-14 21:05:27.660202"]]
+  [1m[35m (2.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUserEvent Load (1.0ms)[0m  [1m[34mSELECT  "user_events".* FROM "user_events" LIMIT $1[0m  [["LIMIT", 11]]
+Started POST "/userevents" for 127.0.0.1 at 2019-02-14 15:30:41 -0600
+  
+ActionController::RoutingError (uninitialized constant UsereventsController):
+  
+bootsnap (1.4.0) lib/bootsnap/load_path_cache/core_ext/active_support.rb:76:in `block in load_missing_constant'
+bootsnap (1.4.0) lib/bootsnap/load_path_cache/core_ext/active_support.rb:8:in `without_bootsnap_cache'
+bootsnap (1.4.0) lib/bootsnap/load_path_cache/core_ext/active_support.rb:76:in `rescue in load_missing_constant'
+bootsnap (1.4.0) lib/bootsnap/load_path_cache/core_ext/active_support.rb:59:in `load_missing_constant'
+activesupport (5.2.2) lib/active_support/inflector/methods.rb:283:in `const_get'
+activesupport (5.2.2) lib/active_support/inflector/methods.rb:283:in `block in constantize'
+activesupport (5.2.2) lib/active_support/inflector/methods.rb:281:in `each'
+activesupport (5.2.2) lib/active_support/inflector/methods.rb:281:in `inject'
+activesupport (5.2.2) lib/active_support/inflector/methods.rb:281:in `constantize'
+actionpack (5.2.2) lib/action_dispatch/http/request.rb:88:in `controller_class_for'
+actionpack (5.2.2) lib/action_dispatch/http/request.rb:81:in `controller_class'
+actionpack (5.2.2) lib/action_dispatch/routing/route_set.rb:46:in `controller'
+actionpack (5.2.2) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (5.2.2) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.2) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.2) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.2) lib/action_dispatch/routing/route_set.rb:840:in `call'
+rack (2.0.6) lib/rack/etag.rb:25:in `call'
+rack (2.0.6) lib/rack/conditional_get.rb:38:in `call'
+rack (2.0.6) lib/rack/head.rb:12:in `call'
+activerecord (5.2.2) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.2) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.2) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+>>>>>>> f47a6fca4d29166861aa5658e9ba224d2cf53914
 web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
 web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
 web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
@@ -4916,6 +4954,7 @@ puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
 puma (3.12.0) lib/puma/server.rb:472:in `process_client'
 puma (3.12.0) lib/puma/server.rb:332:in `block in run'
 puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+<<<<<<< HEAD
 Started GET "/" for 127.0.0.1 at 2019-02-14 11:12:03 -0600
 Processing by Rails::WelcomeController#index as HTML
   Rendering /Users/clairenguyen/.rvm/gems/ruby-2.3.3/gems/railties-5.2.2/lib/rails/templates/rails/welcome/index.html.erb
@@ -4926,6 +4965,11 @@ Completed 200 OK in 25ms (Views: 11.9ms | ActiveRecord: 0.0ms)
 Started GET "/login" for 127.0.0.1 at 2019-02-14 11:25:02 -0600
   
 ActionController::RoutingError (No route matches [GET] "/login"):
+=======
+Started POST "/user_events" for 127.0.0.1 at 2019-02-14 15:31:30 -0600
+  
+ActionController::RoutingError (No route matches [POST] "/user_events"):
+>>>>>>> f47a6fca4d29166861aa5658e9ba224d2cf53914
   
 actionpack (5.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
 web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
@@ -4956,6 +5000,7 @@ puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
 puma (3.12.0) lib/puma/server.rb:472:in `process_client'
 puma (3.12.0) lib/puma/server.rb:332:in `block in run'
 puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+<<<<<<< HEAD
 Started GET "/" for 127.0.0.1 at 2019-02-14 11:25:54 -0600
 Processing by Rails::WelcomeController#index as HTML
   Rendering /Users/clairenguyen/.rvm/gems/ruby-2.3.3/gems/railties-5.2.2/lib/rails/templates/rails/welcome/index.html.erb
@@ -4966,6 +5011,11 @@ Completed 200 OK in 27ms (Views: 11.8ms | ActiveRecord: 0.0ms)
 Started GET "/signup" for 127.0.0.1 at 2019-02-14 11:26:55 -0600
   
 ActionController::RoutingError (No route matches [GET] "/signup"):
+=======
+Started POST "/UserEvents" for 127.0.0.1 at 2019-02-14 15:31:39 -0600
+  
+ActionController::RoutingError (No route matches [POST] "/UserEvents"):
+>>>>>>> f47a6fca4d29166861aa5658e9ba224d2cf53914
   
 actionpack (5.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
 web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
@@ -4996,6 +5046,7 @@ puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
 puma (3.12.0) lib/puma/server.rb:472:in `process_client'
 puma (3.12.0) lib/puma/server.rb:332:in `block in run'
 puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+<<<<<<< HEAD
 Started GET "/" for 127.0.0.1 at 2019-02-14 11:27:33 -0600
 Processing by Rails::WelcomeController#index as HTML
   Rendering /Users/clairenguyen/.rvm/gems/ruby-2.3.3/gems/railties-5.2.2/lib/rails/templates/rails/welcome/index.html.erb
@@ -5057,6 +5108,12 @@ app/controllers/application_controller.rb:24:in `authenticate'
 Started GET "/interests" for 127.0.0.1 at 2019-02-14 12:03:07 -0600
 Processing by InterestsController#index as HTML
 Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms)
+=======
+Started POST "/user_events" for 127.0.0.1 at 2019-02-14 15:34:51 -0600
+Processing by UserEventsController#create as */*
+  Parameters: {"date"=>"May 2, 2019", "title"=>"Programming Fun", "description"=>"Learn to code with your friends!", "type"=>"Computer Science", "location"=>"Flatiron School", "user_event"=>{}}
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 15.0ms)
+>>>>>>> f47a6fca4d29166861aa5658e9ba224d2cf53914
 
 
   
@@ -5064,6 +5121,7 @@ NoMethodError (undefined method `split' for nil:NilClass):
   
 app/controllers/application_controller.rb:14:in `current_user'
 app/controllers/application_controller.rb:24:in `authenticate'
+<<<<<<< HEAD
 Started GET "/events" for 127.0.0.1 at 2019-02-14 12:04:09 -0600
 Processing by EventsController#index as HTML
 Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
@@ -5118,6 +5176,52 @@ Started GET "/interest" for 127.0.0.1 at 2019-02-14 12:59:03 -0600
 ActionController::RoutingError (No route matches [GET] "/interest"):
   
 actionpack (5.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+=======
+Started POST "/auth" for 127.0.0.1 at 2019-02-14 15:36:41 -0600
+Error occurred while parsing request parameters.
+Contents:
+
+{
+	"username": "claire",
+	"password": "6789",
+	
+}
+  
+ActionDispatch::Http::Parameters::ParseError (822: unexpected token at '{
+	"username": "claire",
+	"password": "6789",
+	
+}'):
+  
+actionpack (5.2.2) lib/action_dispatch/http/parameters.rb:117:in `rescue in parse_formatted_parameters'
+actionpack (5.2.2) lib/action_dispatch/http/parameters.rb:111:in `parse_formatted_parameters'
+actionpack (5.2.2) lib/action_dispatch/http/request.rb:381:in `block in POST'
+rack (2.0.6) lib/rack/request.rb:59:in `fetch'
+rack (2.0.6) lib/rack/request.rb:59:in `fetch_header'
+actionpack (5.2.2) lib/action_dispatch/http/request.rb:380:in `POST'
+actionpack (5.2.2) lib/action_dispatch/http/parameters.rb:55:in `parameters'
+actionpack (5.2.2) lib/action_controller/metal/params_wrapper.rb:290:in `_wrapper_enabled?'
+actionpack (5.2.2) lib/action_controller/metal/params_wrapper.rb:244:in `process_action'
+activerecord (5.2.2) lib/active_record/railties/controller_runtime.rb:24:in `process_action'
+actionpack (5.2.2) lib/abstract_controller/base.rb:134:in `process'
+actionview (5.2.2) lib/action_view/rendering.rb:32:in `process'
+actionpack (5.2.2) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.2) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.2) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.2) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.2) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.2) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.2) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.2) lib/action_dispatch/routing/route_set.rb:840:in `call'
+rack (2.0.6) lib/rack/etag.rb:25:in `call'
+rack (2.0.6) lib/rack/conditional_get.rb:38:in `call'
+rack (2.0.6) lib/rack/head.rb:12:in `call'
+activerecord (5.2.2) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.2) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.2) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
 web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
 web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
 web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
@@ -5146,6 +5250,147 @@ puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
 puma (3.12.0) lib/puma/server.rb:472:in `process_client'
 puma (3.12.0) lib/puma/server.rb:332:in `block in run'
 puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started POST "/auth" for 127.0.0.1 at 2019-02-14 15:37:17 -0600
+Processing by AuthController#create as */*
+  Parameters: {"username"=>"claire", "password"=>"[FILTERED]", "auth"=>{"username"=>"claire", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "claire"], ["LIMIT", 1]]
+  ↳ app/controllers/auth_controller.rb:6
+Completed 200 OK in 182ms (Views: 1.8ms | ActiveRecord: 14.2ms)
+
+
+Started POST "/user_events" for 127.0.0.1 at 2019-02-14 15:37:30 -0600
+Processing by UserEventsController#create as */*
+  Parameters: {"date"=>"May 2, 2019", "title"=>"Programming Fun", "description"=>"Learn to code with your friends!", "type"=>"Computer Science", "location"=>"Flatiron School", "user_event"=>{}}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+Unpermitted parameters: :date, :title, :description, :type, :location, :user_event
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/user_events_controller.rb:3
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/user_events_controller.rb:3
+Completed 200 OK in 67ms (Views: 0.8ms | ActiveRecord: 6.5ms)
+
+
+Started POST "/user_events" for 127.0.0.1 at 2019-02-14 15:41:55 -0600
+Processing by UserEventsController#create as */*
+  Parameters: {"date"=>"May 2, 2019", "title"=>"Programming Fun", "description"=>"Learn to code with your friends!", "type"=>"Computer Science", "location"=>"Flatiron School", "user_event"=>{}}
+Unpermitted parameters: :date, :title, :description, :type, :location, :user_event
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/user_events_controller.rb:5
+  [1m[35m (1.0ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/user_events_controller.rb:5
+Completed 200 OK in 43ms (Views: 0.7ms | ActiveRecord: 8.1ms)
+
+
+Started POST "/user_events" for 127.0.0.1 at 2019-02-14 15:42:09 -0600
+Processing by UserEventsController#create as */*
+  Parameters: {"date"=>"May 2, 2019", "title"=>"Programming Fun", "description"=>"Learn to code with your friends!", "type"=>"Computer Science", "location"=>"Flatiron School", "user_event"=>{}}
+Unpermitted parameters: :date, :title, :description, :type, :location, :user_event
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/user_events_controller.rb:5
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/user_events_controller.rb:5
+Completed 200 OK in 38ms (Views: 0.7ms | ActiveRecord: 8.2ms)
+
+
+Started POST "/user_events" for 127.0.0.1 at 2019-02-14 15:43:24 -0600
+Processing by UserEventsController#create as */*
+  Parameters: {"date"=>"May 2, 2019", "title"=>"Programming Fun", "description"=>"Learn to code with your friends!", "type"=>"Computer Science", "location"=>"Flatiron School", "user_event"=>{}}
+Unpermitted parameters: :date, :title, :description, :type, :location, :user_event
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/user_events_controller.rb:5
+  [1m[35m (0.5ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/user_events_controller.rb:5
+Completed 200 OK in 8ms (Views: 0.7ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/user_events" for 127.0.0.1 at 2019-02-14 15:44:06 -0600
+Processing by UserEventsController#create as */*
+  Parameters: {"date"=>"May 2, 2019", "title"=>"Programming Fun", "description"=>"Learn to code with your friends!", "type"=>"Computer Science", "location"=>"Flatiron School", "user_event"=>{}}
+Unpermitted parameters: :date, :title, :description, :type, :location, :user_event
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/user_events_controller.rb:5
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/user_events_controller.rb:5
+Completed 200 OK in 51ms (Views: 0.6ms | ActiveRecord: 8.9ms)
+
+
+Started POST "/user_events" for 127.0.0.1 at 2019-02-14 15:51:29 -0600
+Processing by UserEventsController#create as */*
+  Parameters: {"date"=>"May 2, 2019", "title"=>"Programming Fun", "description"=>"Learn to code with your friends!", "type"=>"Computer Science", "location"=>"Flatiron School", "user_event"=>{}}
+Completed 500 Internal Server Error in 129ms (ActiveRecord: 5.9ms)
+
+
+  
+NoMethodError (undefined method `define_current_event' for #<UserEventsController:0x007fd9f3c63070>
+Did you mean?  define_current_userevent):
+  
+activesupport (5.2.2) lib/active_support/callbacks.rb:426:in `block in make_lambda'
+activesupport (5.2.2) lib/active_support/callbacks.rb:198:in `block (2 levels) in halting'
+actionpack (5.2.2) lib/abstract_controller/callbacks.rb:34:in `block (2 levels) in <module:Callbacks>'
+activesupport (5.2.2) lib/active_support/callbacks.rb:199:in `block in halting'
+activesupport (5.2.2) lib/active_support/callbacks.rb:513:in `block in invoke_before'
+activesupport (5.2.2) lib/active_support/callbacks.rb:513:in `each'
+activesupport (5.2.2) lib/active_support/callbacks.rb:513:in `invoke_before'
+activesupport (5.2.2) lib/active_support/callbacks.rb:131:in `run_callbacks'
+actionpack (5.2.2) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (5.2.2) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (5.2.2) lib/action_controller/metal/instrumentation.rb:34:in `block in process_action'
+activesupport (5.2.2) lib/active_support/notifications.rb:168:in `block in instrument'
+activesupport (5.2.2) lib/active_support/notifications/instrumenter.rb:23:in `instrument'
+activesupport (5.2.2) lib/active_support/notifications.rb:168:in `instrument'
+actionpack (5.2.2) lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+actionpack (5.2.2) lib/action_controller/metal/params_wrapper.rb:256:in `process_action'
+activerecord (5.2.2) lib/active_record/railties/controller_runtime.rb:24:in `process_action'
+actionpack (5.2.2) lib/abstract_controller/base.rb:134:in `process'
+actionview (5.2.2) lib/action_view/rendering.rb:32:in `process'
+actionpack (5.2.2) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.2) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.2) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.2) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.2) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.2) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.2) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.2) lib/action_dispatch/routing/route_set.rb:840:in `call'
+rack (2.0.6) lib/rack/etag.rb:25:in `call'
+rack (2.0.6) lib/rack/conditional_get.rb:38:in `call'
+rack (2.0.6) lib/rack/head.rb:12:in `call'
+activerecord (5.2.2) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.2) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.2) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+>>>>>>> f47a6fca4d29166861aa5658e9ba224d2cf53914
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.2) lib/rack/cors.rb:97:in `call'
+webpacker (3.5.5) lib/webpacker/dev_server_proxy.rb:22:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (5.2.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+<<<<<<< HEAD
   [1m[35m (1.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
   ↳ bin/rails:9
   [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
@@ -5693,6 +5938,383 @@ Completed 200 OK in 89ms (Views: 1.5ms | ActiveRecord: 76.1ms)
 Started POST "/events/new" for 127.0.0.1 at 2019-02-14 13:43:02 -0600
   
 ActionController::RoutingError (No route matches [POST] "/events/new"):
+=======
+Started POST "/user_events" for 127.0.0.1 at 2019-02-14 15:51:58 -0600
+Processing by UserEventsController#create as */*
+  Parameters: {"date"=>"May 2, 2019", "title"=>"Programming Fun", "description"=>"Learn to code with your friends!", "type"=>"Computer Science", "location"=>"Flatiron School", "user_event"=>{}}
+Unpermitted parameters: :date, :title, :description, :type, :location, :user_event
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/user_events_controller.rb:7
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/user_events_controller.rb:7
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+Completed 500 Internal Server Error in 378ms (ActiveRecord: 21.1ms)
+
+
+  
+NameError (undefined local variable or method `current_event' for #<UserEventsController:0x007fd9f3c46808>
+Did you mean?  current_userevent
+               current_user
+               @current_userevent):
+  
+app/controllers/user_events_controller.rb:9:in `create'
+Started POST "/user_events" for 127.0.0.1 at 2019-02-14 15:53:08 -0600
+Processing by UserEventsController#create as */*
+  Parameters: {"date"=>"May 2, 2019", "title"=>"Programming Fun", "description"=>"Learn to code with your friends!", "type"=>"Computer Science", "location"=>"Flatiron School", "user_event"=>{}}
+Unpermitted parameters: :date, :title, :description, :type, :location, :user_event
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/user_events_controller.rb:7
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/user_events_controller.rb:7
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+Completed 500 Internal Server Error in 55ms (ActiveRecord: 13.8ms)
+
+
+  
+ActiveRecord::AssociationTypeMismatch (Event(#70287082258760) expected, got #<UserEvent id: nil, user_id: nil, event_id: nil, created_at: nil, updated_at: nil> which is an instance of UserEvent(#70287082063500)):
+  
+app/controllers/user_events_controller.rb:9:in `create'
+Started POST "/user_events" for 127.0.0.1 at 2019-02-14 15:53:36 -0600
+Processing by UserEventsController#create as */*
+  Parameters: {"date"=>"May 2, 2019", "title"=>"Programming Fun", "description"=>"Learn to code with your friends!", "type"=>"Computer Science", "location"=>"Flatiron School", "user_event"=>{}}
+Unpermitted parameters: :date, :title, :description, :type, :location, :user_event
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/user_events_controller.rb:7
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/user_events_controller.rb:7
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+Completed 200 OK in 59ms (Views: 0.9ms | ActiveRecord: 18.5ms)
+
+
+Started POST "/user_events" for 127.0.0.1 at 2019-02-14 15:55:36 -0600
+Processing by UserEventsController#create as */*
+  Parameters: {"date"=>"May 2, 2019", "title"=>"Programming Fun", "description"=>"Learn to code with your friends!", "type"=>"Computer Science", "location"=>"Flatiron School", "user_event"=>{}}
+Unpermitted parameters: :date, :title, :description, :type, :location, :user_event
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/user_events_controller.rb:7
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/user_events_controller.rb:7
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+Completed 404 Not Found in 92ms (ActiveRecord: 23.6ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Event without an ID):
+  
+app/controllers/application_controller.rb:28:in `current_event'
+app/controllers/user_events_controller.rb:9:in `create'
+Started POST "/user_events" for 127.0.0.1 at 2019-02-14 16:03:30 -0600
+Processing by UserEventsController#create as */*
+  Parameters: {"date"=>"May 2, 2019", "title"=>"Programming Fun", "description"=>"Learn to code with your friends!", "type"=>"Computer Science", "location"=>"Flatiron School", "user_event"=>{}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/user_events_controller.rb:7
+  [1m[36mEvent Create (1.2ms)[0m  [1m[32mINSERT INTO "events" ("created_at", "updated_at") VALUES ($1, $2) RETURNING "id"[0m  [["created_at", "2019-02-14 22:03:30.826709"], ["updated_at", "2019-02-14 22:03:30.826709"]]
+  ↳ app/controllers/user_events_controller.rb:7
+  [1m[35m (2.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/user_events_controller.rb:7
+Redirected to http://localhost:3000/events/2
+Completed 500 Internal Server Error in 263ms (ActiveRecord: 19.7ms)
+
+
+  
+NameError (undefined local variable or method `userevent' for #<UserEventsController:0x007fd9f91a2720>
+Did you mean?  user_event_url):
+  
+app/controllers/user_events_controller.rb:8:in `create'
+Started POST "/user_events" for 127.0.0.1 at 2019-02-14 16:04:20 -0600
+Processing by UserEventsController#create as */*
+  Parameters: {"date"=>"May 2, 2019", "title"=>"Programming Fun", "description"=>"Learn to code with your friends!", "type"=>"Computer Science", "location"=>"Flatiron School", "user_event"=>{}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/user_events_controller.rb:7
+  [1m[36mEvent Create (4.1ms)[0m  [1m[32mINSERT INTO "events" ("created_at", "updated_at") VALUES ($1, $2) RETURNING "id"[0m  [["created_at", "2019-02-14 22:04:21.177650"], ["updated_at", "2019-02-14 22:04:21.177650"]]
+  ↳ app/controllers/user_events_controller.rb:7
+  [1m[35m (2.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/user_events_controller.rb:7
+Redirected to http://localhost:3000/events/3
+Unpermitted parameters: :date, :title, :description, :type, :location, :user_event
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/user_events_controller.rb:9
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/user_events_controller.rb:9
+Completed 500 Internal Server Error in 360ms (ActiveRecord: 24.3ms)
+
+
+  
+NameError (undefined local variable or method `userevent' for #<UserEventsController:0x007fd9f3b4b9a8>
+Did you mean?  user_event_url):
+  
+app/controllers/user_events_controller.rb:11:in `create'
+Started POST "/user_events" for 127.0.0.1 at 2019-02-14 16:05:18 -0600
+Processing by UserEventsController#create as */*
+  Parameters: {"date"=>"May 2, 2019", "title"=>"Programming Fun", "description"=>"Learn to code with your friends!", "type"=>"Computer Science", "location"=>"Flatiron School", "user_event"=>{}}
+Unpermitted parameters: :date, :title, :description, :type, :location, :user_event
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/user_events_controller.rb:9
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/user_events_controller.rb:9
+Completed 500 Internal Server Error in 240ms (ActiveRecord: 8.7ms)
+
+
+  
+NameError (undefined local variable or method `userevent' for #<UserEventsController:0x007fd9f46e3bd0>
+Did you mean?  user_event_url):
+  
+app/controllers/user_events_controller.rb:11:in `create'
+Started POST "/user_events" for 127.0.0.1 at 2019-02-14 16:05:58 -0600
+Processing by UserEventsController#create as */*
+  Parameters: {"date"=>"May 2, 2019", "title"=>"Programming Fun", "description"=>"Learn to code with your friends!", "type"=>"Computer Science", "location"=>"Flatiron School", "user_event"=>{}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/user_events_controller.rb:7
+  [1m[36mEvent Create (0.5ms)[0m  [1m[32mINSERT INTO "events" ("created_at", "updated_at") VALUES ($1, $2) RETURNING "id"[0m  [["created_at", "2019-02-14 22:05:58.650235"], ["updated_at", "2019-02-14 22:05:58.650235"]]
+  ↳ app/controllers/user_events_controller.rb:7
+  [1m[35m (2.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/user_events_controller.rb:7
+Redirected to http://localhost:3000/events/4
+Unpermitted parameters: :date, :title, :description, :type, :location, :user_event
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/user_events_controller.rb:9
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/user_events_controller.rb:9
+Completed 500 Internal Server Error in 307ms (ActiveRecord: 22.3ms)
+
+
+  
+NameError (undefined local variable or method `userevent' for #<UserEventsController:0x007fd9f31ff660>
+Did you mean?  user_event_url):
+  
+app/controllers/user_events_controller.rb:11:in `create'
+Started POST "/user_events" for 127.0.0.1 at 2019-02-14 16:06:07 -0600
+Processing by UserEventsController#create as */*
+  Parameters: {"date"=>"May 2, 2019", "title"=>"Programming Fun", "description"=>"Learn to code with your friends!", "type"=>"Computer Science", "location"=>"Flatiron School", "user_event"=>{}}
+Unpermitted parameters: :date, :title, :description, :type, :location, :user_event
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/user_events_controller.rb:9
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/user_events_controller.rb:9
+Completed 500 Internal Server Error in 250ms (ActiveRecord: 9.6ms)
+
+
+  
+NameError (undefined local variable or method `userevent' for #<UserEventsController:0x007fd9f342d428>
+Did you mean?  user_event_url):
+  
+app/controllers/user_events_controller.rb:11:in `create'
+Started POST "/user_events" for 127.0.0.1 at 2019-02-14 16:07:01 -0600
+Processing by UserEventsController#create as */*
+  Parameters: {"date"=>"May 2, 2019", "title"=>"Programming Fun", "description"=>"Learn to code with your friends!", "type"=>"Computer Science", "location"=>"Flatiron School", "user_event"=>{}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/user_events_controller.rb:7
+  [1m[36mEvent Create (0.7ms)[0m  [1m[32mINSERT INTO "events" ("created_at", "updated_at") VALUES ($1, $2) RETURNING "id"[0m  [["created_at", "2019-02-14 22:07:02.047282"], ["updated_at", "2019-02-14 22:07:02.047282"]]
+  ↳ app/controllers/user_events_controller.rb:7
+  [1m[35m (2.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/user_events_controller.rb:7
+Redirected to http://localhost:3000/events/5
+Unpermitted parameters: :date, :title, :description, :type, :location, :user_event
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/user_events_controller.rb:8
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/user_events_controller.rb:8
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+Completed 404 Not Found in 99ms (ActiveRecord: 26.0ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Event without an ID):
+  
+app/controllers/application_controller.rb:28:in `current_event'
+app/controllers/user_events_controller.rb:10:in `create'
+Started POST "/user_events" for 127.0.0.1 at 2019-02-14 16:07:23 -0600
+Processing by UserEventsController#create as */*
+  Parameters: {"date"=>"May 2, 2019", "title"=>"Programming Fun", "description"=>"Learn to code with your friends!", "type"=>"Computer Science", "location"=>"Flatiron School", "user_event"=>{}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/user_events_controller.rb:7
+  [1m[36mEvent Create (0.5ms)[0m  [1m[32mINSERT INTO "events" ("created_at", "updated_at") VALUES ($1, $2) RETURNING "id"[0m  [["created_at", "2019-02-14 22:07:23.898199"], ["updated_at", "2019-02-14 22:07:23.898199"]]
+  ↳ app/controllers/user_events_controller.rb:7
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/user_events_controller.rb:7
+Redirected to http://localhost:3000/events/6
+Unpermitted parameters: :date, :title, :description, :type, :location, :user_event
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/user_events_controller.rb:8
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/user_events_controller.rb:8
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+Completed 500 Internal Server Error in 119ms (ActiveRecord: 21.6ms)
+
+
+  
+NoMethodError (undefined method `id' for #<String:0x007fd9f3d53908>):
+  
+app/controllers/user_events_controller.rb:10:in `create'
+Started POST "/user_events" for 127.0.0.1 at 2019-02-14 16:08:54 -0600
+Processing by UserEventsController#create as */*
+  Parameters: {"date"=>"May 2, 2019", "title"=>"Programming Fun", "description"=>"Learn to code with your friends!", "type"=>"Computer Science", "location"=>"Flatiron School", "user_event"=>{}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/user_events_controller.rb:7
+  [1m[36mEvent Create (2.2ms)[0m  [1m[32mINSERT INTO "events" ("created_at", "updated_at") VALUES ($1, $2) RETURNING "id"[0m  [["created_at", "2019-02-14 22:08:54.647459"], ["updated_at", "2019-02-14 22:08:54.647459"]]
+  ↳ app/controllers/user_events_controller.rb:7
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/user_events_controller.rb:7
+Redirected to http://localhost:3000/events/7
+Unpermitted parameters: :date, :title, :description, :type, :location, :user_event
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/user_events_controller.rb:8
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/user_events_controller.rb:8
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+Completed 404 Not Found in 77ms (ActiveRecord: 23.6ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Event without an ID):
+  
+app/controllers/application_controller.rb:28:in `current_event'
+app/controllers/user_events_controller.rb:10:in `create'
+Started POST "/events" for 127.0.0.1 at 2019-02-14 16:09:38 -0600
+Processing by EventsController#create as */*
+  Parameters: {"date"=>"May 2, 2019", "title"=>"Programming Fun", "description"=>"Learn to code with your friends!", "type"=>"Computer Science", "location"=>"Flatiron School", "event"=>{"date"=>"May 2, 2019", "title"=>"Programming Fun", "description"=>"Learn to code with your friends!", "location"=>"Flatiron School", "type"=>"Computer Science"}}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 1.1ms)
+
+
+  
+ActiveRecord::SubclassNotFound (The single-table inheritance mechanism failed to locate the subclass: 'Computer Science'. This error is raised because the column 'type' is reserved for storing the class in case of inheritance. Please rename this column if you didn't intend it to be used for storing the inheritance class or overwrite Event.inheritance_column to use another column for that information.):
+  
+app/controllers/events_controller.rb:4:in `create'
+Started POST "/events" for 127.0.0.1 at 2019-02-14 16:10:50 -0600
+Processing by EventsController#create as */*
+  Parameters: {"date"=>"May 2, 2019", "title"=>"Programming Fun", "description"=>"Learn to code with your friends!", "type"=>"Computer Science", "location"=>"Flatiron School", "event"=>{"date"=>"May 2, 2019", "title"=>"Programming Fun", "description"=>"Learn to code with your friends!", "location"=>"Flatiron School", "type"=>"Computer Science"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+Completed 500 Internal Server Error in 32ms (ActiveRecord: 9.8ms)
+
+
+  
+ActiveRecord::SubclassNotFound (The single-table inheritance mechanism failed to locate the subclass: 'Computer Science'. This error is raised because the column 'type' is reserved for storing the class in case of inheritance. Please rename this column if you didn't intend it to be used for storing the inheritance class or overwrite Event.inheritance_column to use another column for that information.):
+  
+app/controllers/events_controller.rb:4:in `create'
+Started POST "/events" for 127.0.0.1 at 2019-02-14 16:11:57 -0600
+Processing by EventsController#create as */*
+  Parameters: {"date"=>"May 2, 2019", "title"=>"Programming Fun", "description"=>"Learn to code with your friends!", "type"=>"Math", "location"=>"Flatiron School", "event"=>{"date"=>"May 2, 2019", "title"=>"Programming Fun", "description"=>"Learn to code with your friends!", "location"=>"Flatiron School", "type"=>"Math"}}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.9ms)
+
+
+  
+ActiveRecord::SubclassNotFound (Invalid single-table inheritance type: Math is not a subclass of Event):
+  
+app/controllers/events_controller.rb:4:in `create'
+Started POST "/events" for 127.0.0.1 at 2019-02-14 16:12:43 -0600
+Processing by EventsController#create as */*
+  Parameters: {"date"=>"May 2, 2019", "title"=>"Programming Fun", "description"=>"Learn to code with your friends!", "type"=>"", "location"=>"Flatiron School", "event"=>{"date"=>"May 2, 2019", "title"=>"Programming Fun", "description"=>"Learn to code with your friends!", "location"=>"Flatiron School", "type"=>""}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/events_controller.rb:4
+  [1m[36mEvent Create (0.5ms)[0m  [1m[32mINSERT INTO "events" ("date", "title", "description", "location", "type", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["date", "2019-05-02 00:00:00"], ["title", "Programming Fun"], ["description", "Learn to code with your friends!"], ["location", "Flatiron School"], ["type", ""], ["created_at", "2019-02-14 22:12:43.875874"], ["updated_at", "2019-02-14 22:12:43.875874"]]
+  ↳ app/controllers/events_controller.rb:4
+  [1m[35m (2.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/events_controller.rb:4
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/events_controller.rb:6
+  [1m[36mUserEvent Create (8.0ms)[0m  [1m[32mINSERT INTO "user_events" ("user_id", "event_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 5], ["event_id", 8], ["created_at", "2019-02-14 22:12:43.965079"], ["updated_at", "2019-02-14 22:12:43.965079"]]
+  ↳ app/controllers/events_controller.rb:6
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/events_controller.rb:6
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/events_controller.rb:8
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/events_controller.rb:8
+Completed 200 OK in 144ms (Views: 0.6ms | ActiveRecord: 30.2ms)
+
+
+Started POST "/user_events" for 127.0.0.1 at 2019-02-14 16:16:49 -0600
+Processing by UserEventsController#create as */*
+  Parameters: {"date"=>"May 2, 2019", "title"=>"Programming Fun", "description"=>"Learn to code with your friends!", "location"=>"Flatiron School", "user_event"=>{}}
+Unpermitted parameters: :date, :title, :description, :location, :user_event
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/user_events_controller.rb:8
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/user_events_controller.rb:8
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+Completed 404 Not Found in 75ms (ActiveRecord: 22.3ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Event without an ID):
+  
+app/controllers/application_controller.rb:28:in `current_event'
+app/controllers/user_events_controller.rb:10:in `create'
+  [1m[36mUserEvent Load (0.6ms)[0m  [1m[34mSELECT  "user_events".* FROM "user_events" LIMIT $1[0m  [["LIMIT", 11]]
+Started POST "/events" for 127.0.0.1 at 2019-02-14 16:26:46 -0600
+Processing by EventsController#create as */*
+  Parameters: {"date"=>"May 2, 2019", "title"=>"Science", "description"=>"Learn about science with your friends!", "location"=>"Clear Brook", "event"=>{"date"=>"May 2, 2019", "title"=>"Science", "description"=>"Learn about science with your friends!", "location"=>"Clear Brook"}}
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/events_controller.rb:4
+  [1m[36mEvent Create (0.9ms)[0m  [1m[32mINSERT INTO "events" ("date", "title", "description", "location", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["date", "2019-05-02 00:00:00"], ["title", "Science"], ["description", "Learn about science with your friends!"], ["location", "Clear Brook"], ["created_at", "2019-02-14 22:26:46.216787"], ["updated_at", "2019-02-14 22:26:46.216787"]]
+  ↳ app/controllers/events_controller.rb:4
+  [1m[35m (2.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/events_controller.rb:4
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/events_controller.rb:6
+  [1m[36mUserEvent Create (2.6ms)[0m  [1m[32mINSERT INTO "user_events" ("user_id", "event_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 5], ["event_id", 9], ["created_at", "2019-02-14 22:26:46.236649"], ["updated_at", "2019-02-14 22:26:46.236649"]]
+  ↳ app/controllers/events_controller.rb:6
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/events_controller.rb:6
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/events_controller.rb:8
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/events_controller.rb:8
+Completed 200 OK in 50ms (Views: 0.6ms | ActiveRecord: 19.1ms)
+
+
+  [1m[36mUserEvent Load (0.6ms)[0m  [1m[34mSELECT  "user_events".* FROM "user_events" LIMIT $1[0m  [["LIMIT", 11]]
+Started POST "/events" for 127.0.0.1 at 2019-02-14 16:28:58 -0600
+Processing by EventsController#create as */*
+  Parameters: {"date"=>"April 2, 2019", "title"=>"Psychology", "description"=>"Learn about science with your friends!", "location"=>"Clear Springs High", "event"=>{"date"=>"April 2, 2019", "title"=>"Psychology", "description"=>"Learn about science with your friends!", "location"=>"Clear Springs High"}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/events_controller.rb:4
+  [1m[36mEvent Create (0.6ms)[0m  [1m[32mINSERT INTO "events" ("date", "title", "description", "location", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["date", "2019-04-02 00:00:00"], ["title", "Psychology"], ["description", "Learn about science with your friends!"], ["location", "Clear Springs High"], ["created_at", "2019-02-14 22:28:58.317738"], ["updated_at", "2019-02-14 22:28:58.317738"]]
+  ↳ app/controllers/events_controller.rb:4
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/events_controller.rb:4
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/events_controller.rb:6
+  [1m[36mUserEvent Create (0.8ms)[0m  [1m[32mINSERT INTO "user_events" ("user_id", "event_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 5], ["event_id", 10], ["created_at", "2019-02-14 22:28:58.354239"], ["updated_at", "2019-02-14 22:28:58.354239"]]
+  ↳ app/controllers/events_controller.rb:6
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/events_controller.rb:6
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/events_controller.rb:8
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/events_controller.rb:8
+Completed 200 OK in 115ms (Views: 0.7ms | ActiveRecord: 35.8ms)
+
+
+  [1m[36mUserEvent Load (0.6ms)[0m  [1m[34mSELECT  "user_events".* FROM "user_events" LIMIT $1[0m  [["LIMIT", 11]]
+Started POST "/event_create_attendee" for 127.0.0.1 at 2019-02-14 16:42:29 -0600
+  
+ActionController::RoutingError (No route matches [POST] "/event_create_attendee"):
   
 actionpack (5.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
 web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
@@ -5723,6 +6345,41 @@ puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
 puma (3.12.0) lib/puma/server.rb:472:in `process_client'
 puma (3.12.0) lib/puma/server.rb:332:in `block in run'
 puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started POST "/create_attendee" for 127.0.0.1 at 2019-02-14 16:43:07 -0600
+  
+ActionController::RoutingError (No route matches [POST] "/create_attendee"):
+>>>>>>> f47a6fca4d29166861aa5658e9ba224d2cf53914
+  
+actionpack (5.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.2) lib/rack/cors.rb:97:in `call'
+webpacker (3.5.5) lib/webpacker/dev_server_proxy.rb:22:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (5.2.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+<<<<<<< HEAD
 Started POST "/events" for 127.0.0.1 at 2019-02-14 13:43:12 -0600
 Processing by EventsController#create as */*
   [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
@@ -5801,6 +6458,13 @@ activesupport (5.2.2) lib/active_support/callbacks.rb:98:in `run_callbacks'
 actionpack (5.2.2) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
 actionpack (5.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
 actionpack (5.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+=======
+Started POST "/event_create_organizer" for 127.0.0.1 at 2019-02-14 16:46:31 -0600
+  
+ActionController::RoutingError (No route matches [POST] "/event_create_organizer"):
+  
+actionpack (5.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+>>>>>>> f47a6fca4d29166861aa5658e9ba224d2cf53914
 web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
 web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
 web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
@@ -5829,6 +6493,7 @@ puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
 puma (3.12.0) lib/puma/server.rb:472:in `process_client'
 puma (3.12.0) lib/puma/server.rb:332:in `block in run'
 puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+<<<<<<< HEAD
 Started POST "/events" for 127.0.0.1 at 2019-02-14 13:45:00 -0600
 Error occurred while parsing request parameters.
 Contents:
@@ -5872,6 +6537,13 @@ activesupport (5.2.2) lib/active_support/callbacks.rb:98:in `run_callbacks'
 actionpack (5.2.2) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
 actionpack (5.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
 actionpack (5.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+=======
+Started POST "/create_organizer" for 127.0.0.1 at 2019-02-14 16:46:42 -0600
+  
+ActionController::RoutingError (No route matches [POST] "/create_organizer"):
+  
+actionpack (5.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+>>>>>>> f47a6fca4d29166861aa5658e9ba224d2cf53914
 web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
 web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
 web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
@@ -5900,6 +6572,7 @@ puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
 puma (3.12.0) lib/puma/server.rb:472:in `process_client'
 puma (3.12.0) lib/puma/server.rb:332:in `block in run'
 puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+<<<<<<< HEAD
 Started POST "/events" for 127.0.0.1 at 2019-02-14 13:45:32 -0600
 Processing by EventsController#create as */*
   Parameters: {"title"=>"Leadership Workshop", "description"=>"Learn how to be a leader!", "event"=>{"title"=>"Leadership Workshop", "description"=>"Learn how to be a leader!"}}
@@ -6385,6 +7058,11 @@ Completed 200 OK in 92ms (Views: 2.5ms | ActiveRecord: 3.3ms)
 Started GET "/user" for 127.0.0.1 at 2019-02-14 14:16:03 -0600
   
 ActionController::RoutingError (No route matches [GET] "/user"):
+=======
+Started POST "/create_organizer" for 127.0.0.1 at 2019-02-14 16:54:16 -0600
+  
+ActionController::RoutingError (No route matches [POST] "/create_organizer"):
+>>>>>>> f47a6fca4d29166861aa5658e9ba224d2cf53914
   
 actionpack (5.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
 web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
@@ -6415,6 +7093,7 @@ puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
 puma (3.12.0) lib/puma/server.rb:472:in `process_client'
 puma (3.12.0) lib/puma/server.rb:332:in `block in run'
 puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+<<<<<<< HEAD
 Started GET "/users" for 127.0.0.1 at 2019-02-14 14:16:07 -0600
 Processing by UsersController#index as */*
   Parameters: {"user"=>{}}
@@ -10216,3 +10895,463 @@ Filter chain halted as :authenticate rendered or redirected
 Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms)
 
 
+=======
+Started POST "/events/create_organizer" for 127.0.0.1 at 2019-02-14 16:54:30 -0600
+  
+ActionController::RoutingError (No route matches [POST] "/events/create_organizer"):
+  
+actionpack (5.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.2) lib/rack/cors.rb:97:in `call'
+webpacker (3.5.5) lib/webpacker/dev_server_proxy.rb:22:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (5.2.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started POST "/events/create_organizer" for 127.0.0.1 at 2019-02-14 16:55:00 -0600
+  
+ActionController::RoutingError (No route matches [POST] "/events/create_organizer"):
+  
+actionpack (5.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.2) lib/rack/cors.rb:97:in `call'
+webpacker (3.5.5) lib/webpacker/dev_server_proxy.rb:22:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (5.2.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started POST "/events/create_organizer" for 127.0.0.1 at 2019-02-14 16:55:15 -0600
+  
+ActionController::RoutingError (No route matches [POST] "/events/create_organizer"):
+  
+actionpack (5.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.2) lib/rack/cors.rb:97:in `call'
+webpacker (3.5.5) lib/webpacker/dev_server_proxy.rb:22:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (5.2.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started POST "/events/create_organizer" for 127.0.0.1 at 2019-02-14 16:55:27 -0600
+  
+ActionController::RoutingError (No route matches [POST] "/events/create_organizer"):
+  
+actionpack (5.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.2) lib/rack/cors.rb:97:in `call'
+webpacker (3.5.5) lib/webpacker/dev_server_proxy.rb:22:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (5.2.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started POST "/create_organizer" for 127.0.0.1 at 2019-02-14 16:56:08 -0600
+  
+ActionController::RoutingError (No route matches [POST] "/create_organizer"):
+  
+actionpack (5.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.2) lib/rack/cors.rb:97:in `call'
+webpacker (3.5.5) lib/webpacker/dev_server_proxy.rb:22:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (5.2.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started POST "/create_organizer" for 127.0.0.1 at 2019-02-14 16:56:43 -0600
+  
+ActionController::RoutingError (No route matches [POST] "/create_organizer"):
+  
+actionpack (5.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.2) lib/rack/cors.rb:97:in `call'
+webpacker (3.5.5) lib/webpacker/dev_server_proxy.rb:22:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (5.2.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started POST "/events/create_organizer" for 127.0.0.1 at 2019-02-14 17:04:06 -0600
+  
+SyntaxError (/Users/flatironschool/Development/Mod4/Server/config/routes.rb:3: syntax error, unexpected ':', expecting keyword_end
+... => 'events#create_organizer' :via => :post
+...                               ^):
+  
+config/routes.rb:3: syntax error, unexpected ':', expecting keyword_end
+Started POST "/events/create_organizer" for 127.0.0.1 at 2019-02-14 17:05:27 -0600
+  
+ActionController::RoutingError (No route matches [POST] "/events/create_organizer"):
+  
+actionpack (5.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.2) lib/rack/cors.rb:97:in `call'
+webpacker (3.5.5) lib/webpacker/dev_server_proxy.rb:22:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (5.2.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started POST "/events/create_organizer" for 127.0.0.1 at 2019-02-14 17:07:29 -0600
+  
+ActionController::RoutingError (No route matches [POST] "/events/create_organizer"):
+  
+actionpack (5.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.2) lib/rack/cors.rb:97:in `call'
+webpacker (3.5.5) lib/webpacker/dev_server_proxy.rb:22:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (5.2.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started POST "/events/create_organizer" for 127.0.0.1 at 2019-02-14 17:07:50 -0600
+  
+ActionController::RoutingError (No route matches [POST] "/events/create_organizer"):
+  
+actionpack (5.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.2) lib/rack/cors.rb:97:in `call'
+webpacker (3.5.5) lib/webpacker/dev_server_proxy.rb:22:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (5.2.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started POST "/create_organizer" for 127.0.0.1 at 2019-02-14 17:08:01 -0600
+  
+ActionController::RoutingError (No route matches [POST] "/create_organizer"):
+  
+actionpack (5.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.2) lib/rack/cors.rb:97:in `call'
+webpacker (3.5.5) lib/webpacker/dev_server_proxy.rb:22:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (5.2.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started POST "/events/createorganizer" for 127.0.0.1 at 2019-02-14 17:08:15 -0600
+  
+ActionController::RoutingError (No route matches [POST] "/events/createorganizer"):
+  
+actionpack (5.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.2) lib/rack/cors.rb:97:in `call'
+webpacker (3.5.5) lib/webpacker/dev_server_proxy.rb:22:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (5.2.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started POST "/events/createorganizer" for 127.0.0.1 at 2019-02-14 17:08:52 -0600
+  
+ActionController::RoutingError (No route matches [POST] "/events/createorganizer"):
+  
+actionpack (5.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.2) lib/rack/cors.rb:97:in `call'
+webpacker (3.5.5) lib/webpacker/dev_server_proxy.rb:22:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (5.2.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started POST "/events/createorganizer" for 127.0.0.1 at 2019-02-14 17:10:33 -0600
+Processing by EventsController#createorganizer as */*
+  Parameters: {"date"=>"March 2, 2019", "title"=>"Calculus", "description"=>"Learn about maths with your friends!", "location"=>"Clear Springs High", "event"=>{"date"=>"March 2, 2019", "title"=>"Calculus", "description"=>"Learn about maths with your friends!", "location"=>"Clear Springs High"}}
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/events_controller.rb:4
+  [1m[36mEvent Create (0.9ms)[0m  [1m[32mINSERT INTO "events" ("date", "title", "description", "location", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["date", "2019-03-02 00:00:00"], ["title", "Calculus"], ["description", "Learn about maths with your friends!"], ["location", "Clear Springs High"], ["created_at", "2019-02-14 23:10:33.238320"], ["updated_at", "2019-02-14 23:10:33.238320"]]
+  ↳ app/controllers/events_controller.rb:4
+  [1m[35m (2.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/events_controller.rb:4
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/events_controller.rb:6
+  [1m[36mUserEvent Create (4.4ms)[0m  [1m[32mINSERT INTO "user_events" ("user_id", "event_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 5], ["event_id", 11], ["created_at", "2019-02-14 23:10:33.279782"], ["updated_at", "2019-02-14 23:10:33.279782"]]
+  ↳ app/controllers/events_controller.rb:6
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/events_controller.rb:6
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/events_controller.rb:8
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/events_controller.rb:8
+Completed 200 OK in 138ms (Views: 1.2ms | ActiveRecord: 47.6ms)
+
+
+  [1m[36mUserEvent Load (0.7ms)[0m  [1m[34mSELECT  "user_events".* FROM "user_events" LIMIT $1[0m  [["LIMIT", 11]]
+Started POST "/events/create_attendee" for 127.0.0.1 at 2019-02-14 17:12:46 -0600
+Processing by EventsController#create_attendee as */*
+  Parameters: {"date"=>"February 2, 2019", "title"=>"Biolody", "description"=>"Learn about bio with your friends!", "location"=>"Clear Springs High", "event"=>{"date"=>"February 2, 2019", "title"=>"Biolody", "description"=>"Learn about bio with your friends!", "location"=>"Clear Springs High"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/events_controller.rb:15
+  [1m[36mEvent Create (0.6ms)[0m  [1m[32mINSERT INTO "events" ("date", "title", "description", "location", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["date", "2019-02-02 00:00:00"], ["title", "Biolody"], ["description", "Learn about bio with your friends!"], ["location", "Clear Springs High"], ["created_at", "2019-02-14 23:12:46.695785"], ["updated_at", "2019-02-14 23:12:46.695785"]]
+  ↳ app/controllers/events_controller.rb:15
+  [1m[35m (3.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/events_controller.rb:15
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/events_controller.rb:17
+  [1m[36mUserArrangement Create (5.5ms)[0m  [1m[32mINSERT INTO "user_arrangements" ("user_id", "event_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 5], ["event_id", 12], ["created_at", "2019-02-14 23:12:46.726892"], ["updated_at", "2019-02-14 23:12:46.726892"]]
+  ↳ app/controllers/events_controller.rb:17
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/events_controller.rb:17
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/events_controller.rb:19
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/events_controller.rb:19
+Completed 200 OK in 94ms (Views: 0.9ms | ActiveRecord: 34.0ms)
+
+
+  [1m[36mUserEvent Load (0.7ms)[0m  [1m[34mSELECT  "user_events".* FROM "user_events" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mUserArrangement Load (1.1ms)[0m  [1m[34mSELECT  "user_arrangements".* FROM "user_arrangements" LIMIT $1[0m  [["LIMIT", 11]]
+>>>>>>> f47a6fca4d29166861aa5658e9ba224d2cf53914

@@ -19,6 +19,17 @@ class ApplicationController < ActionController::Base
         end
     end
 
+    def current_event    
+        begin 
+            method, token = request.headers['Authorization'].split(' ')
+            payload, header = decode_token(token)
+            
+            Event.find(payload["event_id"])
+        rescue JWT::DecodeError
+            nil
+        end
+    end
+
     def authenticate
         if !current_user
             render json: { error: true, message: 'Please Login'}

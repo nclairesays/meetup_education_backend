@@ -1,7 +1,8 @@
 class UserInterestsController < ApplicationController
+    skip_before_action :authenticate, only: [ :create ]
     def create
         userinterests = UserInterests.create(userinterests_params)
-        render json: userinterests
+        render json: userinterests, methods: [ :token ]
     end
 
     def userinterests_params
