@@ -11354,4 +11354,579 @@ Completed 200 OK in 94ms (Views: 0.9ms | ActiveRecord: 34.0ms)
 
   [1m[36mUserEvent Load (0.7ms)[0m  [1m[34mSELECT  "user_events".* FROM "user_events" LIMIT $1[0m  [["LIMIT", 11]]
   [1m[36mUserArrangement Load (1.1ms)[0m  [1m[34mSELECT  "user_arrangements".* FROM "user_arrangements" LIMIT $1[0m  [["LIMIT", 11]]
+<<<<<<< HEAD
 >>>>>>> f47a6fca4d29166861aa5658e9ba224d2cf53914
+=======
+Started GET "/users/4" for 127.0.0.1 at 2019-02-14 17:54:17 -0600
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"4"}
+Filter chain halted as :authenticate rendered or redirected
+Completed 200 OK in 21ms (Views: 5.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/4" for 127.0.0.1 at 2019-02-14 17:54:25 -0600
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"4"}
+Filter chain halted as :authenticate rendered or redirected
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/auth" for 127.0.0.1 at 2019-02-14 17:55:21 -0600
+Processing by AuthController#create as */*
+  Parameters: {"username"=>"claire", "password"=>"[FILTERED]", "auth"=>{"username"=>"claire", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (2.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "claire"], ["LIMIT", 1]]
+  ↳ app/controllers/auth_controller.rb:6
+Completed 200 OK in 110ms (Views: 2.8ms | ActiveRecord: 13.9ms)
+
+
+Started GET "/users/5" for 127.0.0.1 at 2019-02-14 17:55:21 -0600
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"5"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:35
+Completed 200 OK in 7ms (Views: 1.7ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/events" for 127.0.0.1 at 2019-02-14 17:55:37 -0600
+Processing by EventsController#index as */*
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+  [1m[36mEvent Load (1.4ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/controllers/events_controller.rb:25
+Completed 200 OK in 22ms (Views: 9.3ms | ActiveRecord: 8.5ms)
+
+
+Started POST "/events/create_organizer" for 127.0.0.1 at 2019-02-14 17:59:55 -0600
+Processing by EventsController#create_organizer as */*
+  Parameters: {"title"=>"Learn Programming", "description"=>"Learn to program with friends!", "event"=>{"title"=>"Learn Programming", "description"=>"Learn to program with friends!"}}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/events_controller.rb:4
+  [1m[36mEvent Create (2.7ms)[0m  [1m[32mINSERT INTO "events" ("title", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "Learn Programming"], ["description", "Learn to program with friends!"], ["created_at", "2019-02-14 23:59:55.335943"], ["updated_at", "2019-02-14 23:59:55.335943"]]
+  ↳ app/controllers/events_controller.rb:4
+  [1m[35m (2.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/events_controller.rb:4
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/events_controller.rb:6
+  [1m[36mUserEvent Create (4.3ms)[0m  [1m[32mINSERT INTO "user_events" ("user_id", "event_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 5], ["event_id", 13], ["created_at", "2019-02-14 23:59:55.442368"], ["updated_at", "2019-02-14 23:59:55.442368"]]
+  ↳ app/controllers/events_controller.rb:6
+  [1m[35m (2.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/events_controller.rb:6
+  [1m[35m (1.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/events_controller.rb:8
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/events_controller.rb:8
+Completed 200 OK in 144ms (Views: 2.9ms | ActiveRecord: 32.1ms)
+
+
+Started POST "/events/create_organizer" for 127.0.0.1 at 2019-02-14 18:00:42 -0600
+Processing by EventsController#create_organizer as */*
+  Parameters: {"title"=>"Learn Science", "description"=>"Learn to science with friends!", "event"=>{"title"=>"Learn Science", "description"=>"Learn to science with friends!"}}
+  [1m[36mUser Load (1.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/events_controller.rb:4
+  [1m[36mEvent Create (0.4ms)[0m  [1m[32mINSERT INTO "events" ("title", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "Learn Science"], ["description", "Learn to science with friends!"], ["created_at", "2019-02-15 00:00:42.390092"], ["updated_at", "2019-02-15 00:00:42.390092"]]
+  ↳ app/controllers/events_controller.rb:4
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/events_controller.rb:4
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/events_controller.rb:6
+  [1m[36mUserEvent Create (0.8ms)[0m  [1m[32mINSERT INTO "user_events" ("user_id", "event_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 5], ["event_id", 14], ["created_at", "2019-02-15 00:00:42.404181"], ["updated_at", "2019-02-15 00:00:42.404181"]]
+  ↳ app/controllers/events_controller.rb:6
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/events_controller.rb:6
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/events_controller.rb:8
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/events_controller.rb:8
+Completed 200 OK in 29ms (Views: 0.6ms | ActiveRecord: 6.9ms)
+
+
+  [1m[36mUserEvent Load (0.7ms)[0m  [1m[34mSELECT  "user_events".* FROM "user_events" LIMIT $1[0m  [["LIMIT", 11]]
+Started POST "/events/create_organizer" for 127.0.0.1 at 2019-02-14 18:03:56 -0600
+Processing by EventsController#create_organizer as */*
+  Parameters: {"title"=>"Learn Arabic", "description"=>"Learn Arabic with friends!", "event"=>{"title"=>"Learn Arabic", "description"=>"Learn Arabic with friends!"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/events_controller.rb:4
+  [1m[36mEvent Create (0.4ms)[0m  [1m[32mINSERT INTO "events" ("title", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "Learn Arabic"], ["description", "Learn Arabic with friends!"], ["created_at", "2019-02-15 00:03:56.064192"], ["updated_at", "2019-02-15 00:03:56.064192"]]
+  ↳ app/controllers/events_controller.rb:4
+  [1m[35m (2.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/events_controller.rb:4
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/events_controller.rb:6
+  [1m[36mUserEvent Create (0.7ms)[0m  [1m[32mINSERT INTO "user_events" ("user_id", "event_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 5], ["event_id", 15], ["created_at", "2019-02-15 00:03:56.073927"], ["updated_at", "2019-02-15 00:03:56.073927"]]
+  ↳ app/controllers/events_controller.rb:6
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/events_controller.rb:6
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/events_controller.rb:8
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/events_controller.rb:8
+Completed 200 OK in 21ms (Views: 0.7ms | ActiveRecord: 6.2ms)
+
+
+Started GET "/events/15" for 127.0.0.1 at 2019-02-14 18:03:56 -0600
+Processing by EventsController#show as */*
+  Parameters: {"id"=>"15"}
+  [1m[36mUser Load (3.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+Completed 200 OK in 7ms (Views: 0.2ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/events/15" for 127.0.0.1 at 2019-02-14 18:05:37 -0600
+Processing by EventsController#show as */*
+  Parameters: {"id"=>"15"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+Completed 200 OK in 12ms (Views: 0.4ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/events/15" for 127.0.0.1 at 2019-02-14 18:05:45 -0600
+Processing by EventsController#show as */*
+  Parameters: {"id"=>"15"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+Completed 200 OK in 4ms (Views: 0.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/events/15" for 127.0.0.1 at 2019-02-14 18:06:05 -0600
+Processing by EventsController#show as */*
+  Parameters: {"id"=>"15"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+Completed 200 OK in 4ms (Views: 0.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/events/15" for 127.0.0.1 at 2019-02-14 18:07:23 -0600
+Processing by EventsController#show as */*
+  Parameters: {"id"=>"15"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+Completed 200 OK in 28ms (Views: 3.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/events/15" for 127.0.0.1 at 2019-02-14 18:07:38 -0600
+Processing by EventsController#show as */*
+  Parameters: {"id"=>"15"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+Completed 200 OK in 4ms (Views: 0.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/events/15" for 127.0.0.1 at 2019-02-14 18:08:02 -0600
+Processing by EventsController#show as */*
+  Parameters: {"id"=>"15"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+Completed 200 OK in 5ms (Views: 0.9ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/events/create_organizer" for 127.0.0.1 at 2019-02-14 18:08:55 -0600
+Processing by EventsController#create_organizer as */*
+  Parameters: {"title"=>"Learn Arabic", "description"=>"Learn Arabic with friends!", "event"=>{"title"=>"Learn Arabic", "description"=>"Learn Arabic with friends!"}}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/events_controller.rb:4
+  [1m[36mEvent Create (3.9ms)[0m  [1m[32mINSERT INTO "events" ("title", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "Learn Arabic"], ["description", "Learn Arabic with friends!"], ["created_at", "2019-02-15 00:08:55.937546"], ["updated_at", "2019-02-15 00:08:55.937546"]]
+  ↳ app/controllers/events_controller.rb:4
+  [1m[35m (1.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/events_controller.rb:4
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/events_controller.rb:6
+  [1m[36mUserEvent Create (1.2ms)[0m  [1m[32mINSERT INTO "user_events" ("user_id", "event_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 5], ["event_id", 16], ["created_at", "2019-02-15 00:08:55.974674"], ["updated_at", "2019-02-15 00:08:55.974674"]]
+  ↳ app/controllers/events_controller.rb:6
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/events_controller.rb:6
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/events_controller.rb:8
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/events_controller.rb:8
+Completed 200 OK in 71ms (Views: 1.6ms | ActiveRecord: 11.6ms)
+
+
+Started GET "/events/16" for 127.0.0.1 at 2019-02-14 18:11:15 -0600
+Processing by EventsController#show as */*
+  Parameters: {"id"=>"16"}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+Completed 200 OK in 35ms (Views: 4.6ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/events/16" for 127.0.0.1 at 2019-02-14 18:12:36 -0600
+Processing by EventsController#show as */*
+  Parameters: {"id"=>"16"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+Completed 200 OK in 4ms (Views: 0.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/events/16" for 127.0.0.1 at 2019-02-14 18:12:59 -0600
+Processing by EventsController#show as */*
+  Parameters: {"id"=>"16"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+Completed 200 OK in 3ms (Views: 0.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/events/16" for 127.0.0.1 at 2019-02-14 18:13:07 -0600
+Processing by EventsController#show as */*
+  Parameters: {"id"=>"16"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+Completed 200 OK in 4ms (Views: 0.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/events/16" for 127.0.0.1 at 2019-02-14 18:15:05 -0600
+Processing by EventsController#show as */*
+  Parameters: {"id"=>"16"}
+  [1m[36mUser Load (7.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+Completed 200 OK in 34ms (Views: 1.8ms | ActiveRecord: 7.8ms)
+
+
+Started GET "/events/16" for 127.0.0.1 at 2019-02-14 18:19:53 -0600
+Processing by EventsController#show as */*
+  Parameters: {"id"=>"16"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+  [1m[36mEvent Load (0.9ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/events_controller.rb:29
+Completed 200 OK in 202ms (Views: 4.3ms | ActiveRecord: 29.7ms)
+
+
+Started GET "/events/16" for 127.0.0.1 at 2019-02-14 18:20:52 -0600
+Processing by EventsController#show as */*
+  Parameters: {"id"=>"16"}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+Completed 200 OK in 112ms (Views: 0.4ms | ActiveRecord: 17.1ms)
+
+
+Started GET "/events/16" for 127.0.0.1 at 2019-02-14 18:22:01 -0600
+Processing by EventsController#show as */*
+  Parameters: {"id"=>"16"}
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+  [1m[36mEvent Load (0.9ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/events_controller.rb:29
+Completed 200 OK in 180ms (Views: 2.0ms | ActiveRecord: 29.6ms)
+
+
+Started GET "/events/16" for 127.0.0.1 at 2019-02-14 18:23:06 -0600
+Processing by EventsController#show as */*
+  Parameters: {"id"=>"16"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+  [1m[36mEvent Load (0.7ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/events_controller.rb:29
+Completed 200 OK in 8ms (Views: 1.0ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/events/16" for 127.0.0.1 at 2019-02-14 18:24:12 -0600
+Processing by EventsController#show as */*
+  Parameters: {"id"=>"16"}
+  [1m[36mUser Load (1.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+  [1m[36mEvent Load (0.8ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/events_controller.rb:29
+Completed 200 OK in 10ms (Views: 1.4ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/events/16" for 127.0.0.1 at 2019-02-14 18:24:30 -0600
+Processing by EventsController#show as */*
+  Parameters: {"id"=>"16"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+  [1m[36mEvent Load (0.7ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/events_controller.rb:29
+Completed 200 OK in 9ms (Views: 1.3ms | ActiveRecord: 1.2ms)
+
+
+Started POST "/events/create_organizer" for 127.0.0.1 at 2019-02-14 18:24:49 -0600
+Processing by EventsController#create_organizer as */*
+  Parameters: {"title"=>"Learn Japanese", "description"=>"Learn Japanese with friends!", "event"=>{"title"=>"Learn Japanese", "description"=>"Learn Japanese with friends!"}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/events_controller.rb:4
+  [1m[36mEvent Create (2.4ms)[0m  [1m[32mINSERT INTO "events" ("title", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "Learn Japanese"], ["description", "Learn Japanese with friends!"], ["created_at", "2019-02-15 00:24:49.647687"], ["updated_at", "2019-02-15 00:24:49.647687"]]
+  ↳ app/controllers/events_controller.rb:4
+  [1m[35m (2.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/events_controller.rb:4
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/events_controller.rb:6
+  [1m[36mUserEvent Create (1.1ms)[0m  [1m[32mINSERT INTO "user_events" ("user_id", "event_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 5], ["event_id", 17], ["created_at", "2019-02-15 00:24:49.739599"], ["updated_at", "2019-02-15 00:24:49.739599"]]
+  ↳ app/controllers/events_controller.rb:6
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/events_controller.rb:6
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/events_controller.rb:8
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/events_controller.rb:8
+Completed 200 OK in 112ms (Views: 0.7ms | ActiveRecord: 18.7ms)
+
+
+Started GET "/events/17" for 127.0.0.1 at 2019-02-14 18:24:49 -0600
+Processing by EventsController#show as */*
+  Parameters: {"id"=>"17"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+  [1m[36mEvent Load (0.9ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/events_controller.rb:29
+Completed 200 OK in 10ms (Views: 2.4ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/events" for 127.0.0.1 at 2019-02-14 18:24:53 -0600
+Processing by EventsController#index as */*
+  [1m[36mUser Load (3.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+  [1m[36mEvent Load (1.7ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/controllers/events_controller.rb:25
+Completed 200 OK in 25ms (Views: 18.0ms | ActiveRecord: 5.0ms)
+
+
+Started GET "/events/8" for 127.0.0.1 at 2019-02-14 18:24:57 -0600
+Processing by EventsController#show as */*
+  Parameters: {"id"=>"8"}
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+  [1m[36mEvent Load (0.7ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/events_controller.rb:29
+Completed 200 OK in 9ms (Views: 1.2ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/events/8" for 127.0.0.1 at 2019-02-14 18:25:29 -0600
+Processing by EventsController#show as */*
+  Parameters: {"id"=>"8"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+  [1m[36mEvent Load (0.7ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/events_controller.rb:29
+Completed 200 OK in 6ms (Views: 1.0ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/events/create_attendee" for 127.0.0.1 at 2019-02-14 18:25:31 -0600
+Processing by EventsController#create_attendee as */*
+  Parameters: {"user_id"=>5, "event_id"=>8, "event"=>{}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+Completed 400 Bad Request in 5ms (ActiveRecord: 0.4ms)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: event):
+  
+app/controllers/events_controller.rb:57:in `event_params'
+app/controllers/events_controller.rb:15:in `create_attendee'
+Started GET "/events/8" for 127.0.0.1 at 2019-02-14 18:26:13 -0600
+Processing by EventsController#show as */*
+  Parameters: {"id"=>"8"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+  [1m[36mEvent Load (0.6ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/events_controller.rb:29
+Completed 200 OK in 201ms (Views: 1.0ms | ActiveRecord: 25.1ms)
+
+
+Started POST "/events/create_attendee" for 127.0.0.1 at 2019-02-14 18:26:14 -0600
+Processing by EventsController#create_attendee as */*
+  Parameters: {"user_id"=>5, "event_id"=>8, "event"=>{}}
+  [1m[36mUser Load (2.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+Completed 500 Internal Server Error in 438ms (ActiveRecord: 2.1ms)
+
+
+  
+NameError (undefined local variable or method `event' for #<EventsController:0x007fd9f32164f0>
+Did you mean?  event_url):
+  
+app/controllers/events_controller.rb:17:in `create_attendee'
+Started GET "/events/8" for 127.0.0.1 at 2019-02-14 18:34:51 -0600
+Processing by EventsController#show as */*
+  Parameters: {"id"=>"8"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+  [1m[36mEvent Load (1.0ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/events_controller.rb:28
+Completed 200 OK in 267ms (Views: 5.1ms | ActiveRecord: 64.0ms)
+
+
+Started GET "/events/8" for 127.0.0.1 at 2019-02-14 18:35:59 -0600
+Processing by EventsController#show as */*
+  Parameters: {"id"=>"8"}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+  [1m[36mEvent Load (0.9ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/events_controller.rb:28
+Completed 200 OK in 383ms (Views: 1.5ms | ActiveRecord: 36.4ms)
+
+
+Started GET "/events/8" for 127.0.0.1 at 2019-02-14 18:37:29 -0600
+Processing by EventsController#show as */*
+  Parameters: {"id"=>"8"}
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+  [1m[36mEvent Load (0.8ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/events_controller.rb:28
+Completed 200 OK in 241ms (Views: 1.3ms | ActiveRecord: 27.1ms)
+
+
+Started POST "/events/8/create_attendee" for 127.0.0.1 at 2019-02-14 18:37:31 -0600
+Processing by EventsController#create_attendee as */*
+  Parameters: {"user_id"=>5, "event_id"=>8, "id"=>"8", "event"=>{}}
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 1.7ms)
+
+
+  
+NoMethodError (undefined method `attendees' for nil:NilClass):
+  
+app/controllers/events_controller.rb:16:in `create_attendee'
+Started POST "/events/8/create_attendee" for 127.0.0.1 at 2019-02-14 18:39:40 -0600
+Processing by EventsController#create_attendee as */*
+  Parameters: {"user_id"=>5, "event_id"=>8, "id"=>"8", "event"=>{}}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+  [1m[36mEvent Load (0.6ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/events_controller.rb:47
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/events_controller.rb:18
+  [1m[36mUserArrangement Create (4.6ms)[0m  [1m[32mINSERT INTO "user_arrangements" ("user_id", "event_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 5], ["event_id", 8], ["created_at", "2019-02-15 00:39:40.660824"], ["updated_at", "2019-02-15 00:39:40.660824"]]
+  ↳ app/controllers/events_controller.rb:18
+  [1m[35m (2.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/events_controller.rb:18
+Completed 200 OK in 139ms (Views: 0.7ms | ActiveRecord: 36.9ms)
+
+
+Started GET "/events/8" for 127.0.0.1 at 2019-02-14 18:40:07 -0600
+Processing by EventsController#show as */*
+  Parameters: {"id"=>"8"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+  [1m[36mEvent Load (0.7ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/events_controller.rb:47
+  [1m[36mCACHE Event Load (0.1ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/events_controller.rb:30
+Completed 200 OK in 9ms (Views: 1.4ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/events" for 127.0.0.1 at 2019-02-14 18:40:30 -0600
+Processing by EventsController#index as */*
+  [1m[36mUser Load (3.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+  [1m[36mEvent Load (1.0ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/controllers/events_controller.rb:26
+Completed 200 OK in 24ms (Views: 16.2ms | ActiveRecord: 4.8ms)
+
+
+Started POST "/events/" for 127.0.0.1 at 2019-02-14 18:41:31 -0600
+Processing by EventsController#create as */*
+  Parameters: {"title"=>"Notes on happiness", "description"=>"Be happy!", "event"=>{"title"=>"Notes on happiness", "description"=>"Be happy!"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/events_controller.rb:6
+  [1m[36mEvent Create (1.0ms)[0m  [1m[32mINSERT INTO "events" ("title", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "Notes on happiness"], ["description", "Be happy!"], ["created_at", "2019-02-15 00:41:31.764197"], ["updated_at", "2019-02-15 00:41:31.764197"]]
+  ↳ app/controllers/events_controller.rb:6
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/events_controller.rb:6
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/events_controller.rb:8
+  [1m[36mUserEvent Create (2.2ms)[0m  [1m[32mINSERT INTO "user_events" ("user_id", "event_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 5], ["event_id", 18], ["created_at", "2019-02-15 00:41:31.824965"], ["updated_at", "2019-02-15 00:41:31.824965"]]
+  ↳ app/controllers/events_controller.rb:8
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/events_controller.rb:8
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/events_controller.rb:10
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/events_controller.rb:10
+Completed 200 OK in 74ms (Views: 0.6ms | ActiveRecord: 13.6ms)
+
+
+Started GET "/events/18" for 127.0.0.1 at 2019-02-14 18:41:31 -0600
+Processing by EventsController#show as */*
+  Parameters: {"id"=>"18"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+  [1m[36mEvent Load (0.9ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/events_controller.rb:47
+  [1m[36mCACHE Event Load (0.0ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/events_controller.rb:30
+Completed 200 OK in 29ms (Views: 18.6ms | ActiveRecord: 1.6ms)
+
+
+Started POST "/events/18/create_attendee" for 127.0.0.1 at 2019-02-14 18:41:49 -0600
+Processing by EventsController#create_attendee as */*
+  Parameters: {"user_id"=>5, "event_id"=>18, "id"=>"18", "event"=>{}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+  [1m[36mEvent Load (0.6ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/events_controller.rb:47
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/events_controller.rb:18
+  [1m[36mUserArrangement Create (2.3ms)[0m  [1m[32mINSERT INTO "user_arrangements" ("user_id", "event_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 5], ["event_id", 18], ["created_at", "2019-02-15 00:41:49.187265"], ["updated_at", "2019-02-15 00:41:49.187265"]]
+  ↳ app/controllers/events_controller.rb:18
+  [1m[35m (1.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/events_controller.rb:18
+Completed 200 OK in 18ms (Views: 0.6ms | ActiveRecord: 5.1ms)
+
+
+Started POST "/events/18/create_attendee" for 127.0.0.1 at 2019-02-14 18:42:12 -0600
+Processing by EventsController#create_attendee as */*
+  Parameters: {"user_id"=>5, "event_id"=>18, "id"=>"18", "event"=>{}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+  [1m[36mEvent Load (0.9ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/events_controller.rb:47
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+  [1m[35m (0.9ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/events_controller.rb:18
+  [1m[36mUserArrangement Create (0.9ms)[0m  [1m[32mINSERT INTO "user_arrangements" ("user_id", "event_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 5], ["event_id", 18], ["created_at", "2019-02-15 00:42:12.623272"], ["updated_at", "2019-02-15 00:42:12.623272"]]
+  ↳ app/controllers/events_controller.rb:18
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/events_controller.rb:18
+Completed 200 OK in 22ms (Views: 1.1ms | ActiveRecord: 4.7ms)
+
+
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mEvent Load (6.4ms)[0m  [1m[34mSELECT  "events".* FROM "events" INNER JOIN "user_arrangements" ON "events"."id" = "user_arrangements"."event_id" WHERE "user_arrangements"."user_id" = $1 LIMIT $2[0m  [["user_id", 1], ["LIMIT", 11]]
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mEvent Load (1.0ms)[0m  [1m[34mSELECT  "events".* FROM "events" INNER JOIN "user_arrangements" ON "events"."id" = "user_arrangements"."event_id" WHERE "user_arrangements"."user_id" = $1 ORDER BY "events"."id" ASC LIMIT $2[0m  [["user_id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mEvent Load (1.0ms)[0m  [1m[34mSELECT  "events".* FROM "events" INNER JOIN "user_arrangements" ON "events"."id" = "user_arrangements"."event_id" WHERE "user_arrangements"."user_id" = $1 LIMIT $2[0m  [["user_id", 1], ["LIMIT", 11]]
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1 OFFSET $2[0m  [["LIMIT", 1], ["OFFSET", 1]]
+  [1m[36mEvent Load (1.5ms)[0m  [1m[34mSELECT  "events".* FROM "events" INNER JOIN "user_arrangements" ON "events"."id" = "user_arrangements"."event_id" WHERE "user_arrangements"."user_id" = $1 LIMIT $2[0m  [["user_id", 2], ["LIMIT", 11]]
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mEvent Load (1.3ms)[0m  [1m[34mSELECT  "events".* FROM "events" INNER JOIN "user_arrangements" ON "events"."id" = "user_arrangements"."event_id" WHERE "user_arrangements"."user_id" = $1 LIMIT $2[0m  [["user_id", 10], ["LIMIT", 11]]
+  [1m[36mUserEvent Load (0.7ms)[0m  [1m[34mSELECT  "user_events".* FROM "user_events" ORDER BY "user_events"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUserEvent Load (0.8ms)[0m  [1m[34mSELECT  "user_events".* FROM "user_events" ORDER BY "user_events"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUserEvent Load (0.8ms)[0m  [1m[34mSELECT  "user_events".* FROM "user_events" ORDER BY "user_events"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+>>>>>>> d78799c6db865e3626f4859a13d98562b389547f
