@@ -11,7 +11,8 @@ Rails.application.routes.draw do
       # match 'events/create_attendee' => 'events#create_attendee', :via => [:get, :post]
 
       post '/events/:id/create_attendee', to: 'events#create_attendee'
-     
+     get '/users/:id/organizers', to: 'users#organizers'
+     get '/users/:id/attending', to: 'users#attending'
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
    

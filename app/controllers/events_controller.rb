@@ -24,6 +24,26 @@ class EventsController < ApplicationController
         render json: current_event
     end
 
+    # def organizers
+    #     organizerUser = UserEvent.select {
+    #          |x| x.user_id === params[:id]
+    #      }
+    #      arrayOfEventsId = organizerUser.map{|e| e.event_id}
+    #     arrayOfEventsId.map{|e| Event.all.select{|s| s.id === e}}
+         
+    #  end
+    
+    # def organizers
+    #     # Event.all.organizers.find_by(user: params[:id])
+    #     Event.all.each do |event| 
+    #         event.organizers.each do |organizer| 
+    #             if organizer.id === params[:id]
+    #                 return organizer
+    #             end
+    #         end
+    #     end
+    # end
+
     
     def index
         render json: Event.all

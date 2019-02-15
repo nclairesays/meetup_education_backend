@@ -3,6 +3,21 @@ class UsersController < ApplicationController
 
     skip_before_action :authenticate, only: [ :create ]
 
+    def organizers
+        # organizerUser = UserEvent.select {
+        #      |x| x.user_id === params[:id]
+        #  }
+        #  arrayOfEventsId = organizerUser.map{|e| e.event_id}
+        #  list = arrayOfEventsId.map{|e| Event.all.select{|s| s.id === e}}
+        render json: [UserEvent.all, Event.all]
+        
+     end
+
+     def attending
+        render json: [UserArrangement.all, Event.all]
+
+     end
+     
     def create
         user = User.create(user_params)
         render json: user, methods: [ :token ]
