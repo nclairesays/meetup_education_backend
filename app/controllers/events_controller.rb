@@ -3,7 +3,7 @@ class EventsController < ApplicationController
 
     skip_before_action :authenticate, only: [ :create ]
 
-    before_action :define_current_event
+  
 
     def create
         event = Event.create(event_params)

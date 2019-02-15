@@ -7,7 +7,7 @@ class UserEventsController < ApplicationController
         userevent = UserEvent.create(userevent_params)
         # userevent.user = current_user
         # userevent.event = current_event
-       
+       byebug
 
         render json: userevent, methods: [ :token ]
     end
