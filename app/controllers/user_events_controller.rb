@@ -7,27 +7,27 @@ class UserEventsController < ApplicationController
         userevent = UserEvent.create(userevent_params)
         # userevent.user = current_user
         # userevent.event = current_event
-       byebug
+        #    byebug
 
         render json: userevent, methods: [ :token ]
     end
 
-    def organizers
-       organizerUser = UserEvent.select {
-            |x| x.user_id === params[:id]
-        }
-        arrayOfEventsId = organizerUser.map{|e| e.event_id}
-        arrayOfEventsId.map{|e| Event.all.select{|s| s.id === e}}
+    # def organizers
+    #    organizerUser = UserEvent.select {
+    #         |x| x.user_id === params[:id]
+    #     }
+    #     arrayOfEventsId = organizerUser.map{|e| e.event_id}
+    #     arrayOfEventsId.map{|e| Event.all.select{|s| s.id === e}}
         
-        # UserEvent.all.each do |ue|
-        #     Event.all.each do |event| 
-        #         event.organizers.each do |organizer| 
-        #         if organizer.id === params[:id]
-        #             return organizer
-        #         end
-        #     end
-        # end
-    end
+    #     # UserEvent.all.each do |ue|
+    #     #     Event.all.each do |event| 
+    #     #         event.organizers.each do |organizer| 
+    #     #         if organizer.id === params[:id]
+    #     #             return organizer
+    #     #         end
+    #     #     end
+    #     # end
+    #  end
 
 
     def userevent_params
