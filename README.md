@@ -1,25 +1,27 @@
-# README
+## About
+This is a React.js & Rails app where high school students can create or attend educational events and meet community members. The target audiences are students who may not have their club or interest at school. 
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+As a user, you can...
++ sign up for an account
++ log in
++ create your own events
++ edit your own events
++ delete your own events
++ attend other people's events
++ unattend other people's events
++ log out
 
-Things you may want to cover:
+### For Frontend
+<https://github.com/nclairesays/meetup_education_frontend>
 
-* Ruby version
+## Run the app
 
-* System dependencies
+In the project directory, you can run:
 
-* Configuration
+###  `npm install && npm start`
 
-* Database creation
+Runs the app in the development mode.<br>
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-# meetup_education_frontend
+The page will reload if you make edits.<br>
+You will also see any lint errors in the console.
