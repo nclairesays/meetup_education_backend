@@ -16,12 +16,11 @@ As a user, you can...
 
 ## Run the app
 
-In the project directory, you can run:
+In the project directory, you can run server first: 
 
-###  `npm install && npm start`
+###  `bundle install && rails server`
 
 Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Open [http://localhost:3000](http://localhost:3000) to view API in the browser.
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+
